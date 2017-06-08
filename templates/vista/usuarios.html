@@ -1,0 +1,57 @@
+{% extends "admin/temp.html" %}
+
+{% block title %}
+{{titulo}}
+{% endblock %}
+{% block header %}
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+Usuarios Registrados
+{% endblock %}
+{% block content %}
+{% csrf_token %}
+<table>
+<tr>
+        <th>ID</th>
+        <th>Correo</th>
+        <th>Tipo</th>
+        <th>Acciones</th>
+    </tr>
+{% for field in que_usuarios %}
+       <tr> 
+	     <td width="120px">{{field.aidi }}</td>
+         <td width="120px">{{field.correo }}</td>
+	 <td>
+	 {% if field.tipo == 'ad' %}Administrador{% endif %}
+	 {% if field.tipo == 're' %}Regular{% endif %}
+	 </td>
+     <td>
+        {% if field.aidi != request.session.id %}
+         <form  enctype="multipart/form-data" method="POST" action="/usuarios/borraus/">{% csrf_token %}
+         <input type="hidden" name="id" value="{{field.aidi}}">
+         <input type="submit" value="Borrar">
+         </form>
+         {% endif %}
+     </td>
+</tr>
+{% endfor %}
+<tr></tr>
+</table>
+<br>
+{% endblock %}

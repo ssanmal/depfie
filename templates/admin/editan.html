@@ -1,0 +1,28 @@
+{% extends "admin/temp.html" %}
+
+
+{% block title %}
+{{titulo}}
+{% endblock %}
+{% block header %}
+Modificaci&oacuten de Anuncios
+{% endblock %}
+{% block content %}
+<form  enctype="multipart/form-data" method="POST">{% csrf_token %}
+{% for field in ediadform %}
+       <tr> 
+	     <td width="120px">{{field.label_tag }}</td>
+	 <td>{{field }}</td>
+</tr>
+<br>
+<br>
+{% endfor %}
+<input type="hidden" name="id" value="{{aidd}}">
+<tr></tr>
+<tr><td width="120px">
+	<button formaction="/usuarios/postchan/">Guardar</button>
+	<button formaction="/usuarios/postdescan/">Descartar</button>
+</td><td></Td></tr>
+</table>
+</form>
+{% endblock %}

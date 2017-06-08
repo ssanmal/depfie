@@ -1,0 +1,59 @@
+{% load static %}
+<html>
+<head>
+<!--<meta name="google-site-verification" content="GdrwVUKA0hCVh8KL3OuuqRHTtDnUh1lQ8X79PtNmJAM" />
+<link href="{{ STATIC_URL }}css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/JavaScript" src="{{SITE_BASE_URL}}/{{MEDIA_URL}}js/custom.js"></script> -->
+<meta charset="UTF-8">
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/fixedArea.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/fixedArea.css' %}">
+<script>
+var count = 0;
+function KeepCount(caller) {
+  //var chx = document.getElementsByClassName("tutorial");
+  //for(i=0 ; i<chx.length ; i++){
+  //if(chx[i].checked){
+  if (count  < 2 && caller.checked){
+      count++;	
+  }
+  else if(count<=2 && caller.checked==false){
+	       count--;
+  }
+  else if(count==2){
+      alert("Solo puedes seleccionar dos tutoriales");
+      caller.checked=false;
+  }			
+} 
+</script>
+    
+<title>
+{% block title %}
+the title
+{% endblock %}
+</title>
+</head>
+<body>
+<div>
+<div class="header">
+<a href="/usuarios/logot/">Logout</a> | <a href="/usuarios/cambiopassad/">Cambiar Contraseña</a> | <a href="/usuarios/formulario/">Crear Usuarios</a> | <a href="/usuarios/userque/">Ver Usuarios</a> | <a href="/usuarios/creanunad/">Crear Anuncio</a> | <a href="/usuarios/anuque/">Ver Anuncios</a> | <a href="/usuarios/bannque/">Ver Banner</a>
+<h2>
+{% block header %}
+{% endblock %}
+</h2>
+</div>
+
+<div class="content">
+{% block content %}
+here go the content
+{% endblock %}
+</div>
+
+<div class="footer">
+&copy; 2016 Posgrado de Ingenier&iacutea El&eacute;crica
+{% block footer %}
+{% endblock %}
+</div>
+</div>
+</body>
+</html>

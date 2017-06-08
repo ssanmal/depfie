@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{"Registro exitoso"}}
+{% endblock %}
+{% block header %}
+Registro Exitoso
+{% endblock %}
+{% block content %}
+{% csrf_token %}
+<table>
+  <tr>
+    <td>{{"Identificador &Uacutenico de Usuario: "}}</td><td>{{asistente.aidi}}</td>
+  </tr>
+  <tr>
+    <td>{{"Password: "}}</td><td>{{asistente.passw}}</td>
+  </tr>
+  <tr>
+    <td>{{"Tipo de Usuario: "}}</td><td>{% if asistente.tipo == 'ad' %}Administrador{% endif %}
+   {% if asistente.tipo == 're' %}Regular{% endif %}</td>
+  </tr>
+</table>
+<br>
+{% endblock %}

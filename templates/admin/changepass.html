@@ -1,0 +1,23 @@
+{% extends "admin/temp.html" %}
+
+{% block title %}
+{{titulo}}
+{% endblock %}
+{% block header %}
+Cambio de Contraseña
+{% endblock %}
+{% block content %}
+<form  enctype="multipart/form-data" method="POST" action="/usuarios/postcambiocon/">{% csrf_token %}
+{% for field in form %}
+       <tr> 
+	     <td width="120px">{{field.label_tag }}</td>
+	 <td>{{field }}</td>
+</tr>
+<br>
+<br>
+{% endfor %}
+<tr></tr>
+<tr><td width="120px"><input type="submit" value="Enviar" /></td><td></Td></tr>
+</table>
+</form>
+{% endblock %}

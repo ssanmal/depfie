@@ -1,0 +1,113 @@
+{% extends "admin/temp.html" %}
+{% load static %}
+{% block title %}
+{{titulo}}
+{% endblock %}
+{% block header %}
+<style>
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td {
+    word-wrap: break-word;
+}
+
+table th {
+    word-wrap: break-word;
+}
+
+th, td {
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+Anuncios Registrados
+{% endblock %}
+{% block content %}
+{% csrf_token %}
+<!--<div class="wrapper" style="width:90%;height:80%;overflow:auto;">-->
+<table class="persist-area">
+<thead>
+<tr class="persist-header">
+        <th width="7%">Fecha de Creaci&oacuten</th>
+        <th width="7%">Fecha de Inicio</th>
+        <th width="7%">Fecha de Fin</th>
+        <th width="10%">Imagen</th>
+        <th width="12%">Mensaje</th>
+        <th width="10%">URL</th>
+        <th width="6%">Prioridad</th>
+        <th width="10%">Autor</th>
+        <th width="6%">Estado</th>
+        <th width="7%">Fecha de Aprobaci&oacuten</th>
+        <th width="10%">Autorizador</th>
+        <th width="8%">Acciones</th>
+    </tr></thead>
+    <tbody>
+{% for field in que_anuncios %}
+       <tr> 
+	     <td width="5%">{{field.fecha_crea|date:"d-m-Y" }}</td>
+         <td width="5%">{{field.fecha_inicio|date:"d-m-Y" }}</td>
+         <td width="5%">{{field.fecha_fin|date:"d-m-Y" }}</td>
+         <td width="10%">
+         {% if field.imagen %}
+             <img src="{{field.imagen.url}}" alt="My image" style="width:100%;height:25%;"/>
+         {% endif %}
+         </td>
+         <td width="10%">{{field.mensaje }}</td>
+         <td width="10%">{{field.urli }}</td>
+         <td width="10%">
+            {% if field.prioridad == 'nn' %}Muy Baja{% endif %}
+            {% if field.prioridad == 'ni' %}Baja{% endif %}
+            {% if field.prioridad == 'me' %}Media{% endif %}
+            {% if field.prioridad == 'al' %}Alta{% endif %}
+            {% if field.prioridad == 'aa' %}Muy Alta{% endif %}
+         </td>
+         <td width="10%">{{field.creador.aidi }}</td>
+         <td width="10%">
+            {% if field.estado == 'pe' %}Pendiente{% endif %}
+            {% if field.estado == 'ap' %}Aprobado{% endif %}
+            {% if field.estado == 'ne' %}Rechazado{% endif %}
+            {% if field.estado == 'ex' %}Expirado{% endif %}
+         </td>
+         <td width="5%">
+         {% if field.fecha_aut|date:"d-m-Y" == '06-06-1944' %}
+         N/A
+         {% else %}
+         {{field.fecha_aut|date:"d-m-Y" }}
+         {% endif %}
+         </td>
+         <td width="10%">
+         {% if field.autorizador %}
+         {{field.autorizador.aidi }}
+         {% endif %}
+         </td>
+         <td width="10%">
+         <form  enctype="multipart/form-data" method="POST" action="/usuarios/borraan/">{% csrf_token %}
+         <input type="hidden" name="id" value="{{field.id}}">
+         <button formaction="/usuarios/edian/">Editar</button>
+         <button formaction="/usuarios/borraan/">Borrar</button>
+         {% if field.estado == 'pe' or field.estado == 'ne' %}
+         <button formaction="/usuarios/aproban/">Aprobar</button>
+         {% if field.estado != 'ne' %}
+         <button formaction="/usuarios/rechan/">Rechazar</button>
+         {% endif %}
+         {% endif %}
+         </form>
+    </td>
+</tr>
+{% endfor %}
+<tr></tr>
+</tbody>
+</table>
+<!--</div>-->
+<br>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends "admin/tempb.html" %}
+
+{% block title %}
+{{titulo}}
+{% endblock %}
+{% block header %}
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+Banner
+{% endblock %}
+{% block content %}
+{% csrf_token %}
+<div class="container">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" style=" width:600px; height: 400px overflow: hidden;">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+    {% for cont in que_anuncios %}
+      {% if forloop.fisrt %}
+      <li data-target="#myCarousel" data-slide-to="{{forloop.counter0}}" class="active"></li>
+      {% else %}
+      <li data-target="#myCarousel" data-slide-to="{{forloop.counter0}}"></li>
+      {% endif %}
+    {% endfor %}
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+    {% for field in que_anuncios %}
+        {% if forloop.first %}
+          <div class="item active">
+        {% else %}
+          <div class="item">
+        {% endif %}
+        {% if field.imagen %}
+          <img class="pull-left" src="{{field.imagen.url}}" alt="My image" style="width:600px;height:400px;">
+        {% else %}
+          <img class="pull-left" src="/media/imgs/blank.jpeg" alt="My image" style="width:600px;height:400px;">
+        {% endif %}
+            <!--<div class="carousel-caption">-->
+            <span class="pull-right">
+              <p>{{ field.mensaje }}</p>
+            </span>
+          </div>
+    {% endfor %}
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<br>
+{% endblock %}

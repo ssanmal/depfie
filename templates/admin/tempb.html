@@ -1,0 +1,94 @@
+{% load static %}
+<html>
+<head>
+<!--<meta name="google-site-verification" content="GdrwVUKA0hCVh8KL3OuuqRHTtDnUh1lQ8X79PtNmJAM" />
+<link href="{{ STATIC_URL }}css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/JavaScript" src="{{SITE_BASE_URL}}/{{MEDIA_URL}}js/custom.js"></script> -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">-->
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/jcarousel.responsive.css' %}">
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery.jcarousel.min.js' %}"></script>
+<script src="{% static 'js/jcarousel.responsive.js' %}"></script>
+<!--<script src="{% static 'js/bootstrap.min.js' %}"></script>-->
+<style>
+  .carousel-left { width: 75%; float: left; }
+
+  .some-text { float: left; width: 25%; }
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+  }
+  .carousel-indicators li {
+    display: inline-block;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: #0000ff;
+    box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);    
+}
+.left.carousel-control{
+  width: 10%;
+}
+.right.carousel-control{
+  width: 10%;
+}
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}
+.carousel-indicators .active {
+    background-color: #ffff99;
+}
+</style>
+<script>
+var count = 0;
+function KeepCount(caller) {
+  //var chx = document.getElementsByClassName("tutorial");
+  //for(i=0 ; i<chx.length ; i++){
+  //if(chx[i].checked){
+  if (count  < 2 && caller.checked){
+      count++;	
+  }
+  else if(count<=2 && caller.checked==false){
+	       count--;
+  }
+  else if(count==2){
+      alert("Solo puedes seleccionar dos tutoriales");
+      caller.checked=false;
+  }			
+} 
+</script>
+<title>
+{% block title %}
+the title
+{% endblock %}
+</title>
+</head>
+<body>
+<div>
+<div class="header">
+<a href="/usuarios/logot/">Logout</a> | <a href="/usuarios/cambiopassad/">Cambiar Contraseña</a> | <a href="/usuarios/formulario/">Crear Usuarios</a> | <a href="/usuarios/userque/">Ver Usuarios</a> | <a href="/usuarios/creanunad/">Crear Anuncio</a> | <a href="/usuarios/anuque/">Ver Anuncios</a> | <a href="/usuarios/bannque/">Ver Banner</a> | <a href="/usuarios/depque/">Prueba</a>
+<h2>
+{% block header %}
+{% endblock %}
+</h2>
+</div>
+
+<div class="content">
+{% block content %}
+here go the content
+{% endblock %}
+</div>
+
+<div class="footer">
+&copy; 2016 Posgrado de Ingenier&iacutea El&eacute;crica
+{% block footer %}
+{% endblock %}
+</div>
+</div>
+</body>
+</html>

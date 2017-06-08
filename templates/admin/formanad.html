@@ -1,0 +1,24 @@
+{% extends "admin/temp.html" %}
+
+
+{% block title %}
+{{titulo}}
+{% endblock %}
+{% block header %}
+Registro de Anuncios
+{% endblock %}
+{% block content %}
+<form  enctype="multipart/form-data" method="POST" action="/usuarios/postanunad/">{% csrf_token %}
+{% for field in fanun %}
+       <tr> 
+	     <td width="120px">{{field.label_tag }}</td>
+	 <td>{{field }}</td>
+</tr>
+<br>
+<br>
+{% endfor %}
+<tr></tr>
+<tr><td width="120px"><input type="submit" value="Enviar" /></td><td></Td></tr>
+</table>
+</form>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{titulo}}
+{% endblock %}
+{% block header %}
+Registro de Anuncios
+{% endblock %}
+{% block content %}
+<form  enctype="multipart/form-data" method="POST" action="/usuarios/postanun/">{% csrf_token %}
+<table>
+{% for field in form %}
+       <tr> 
+	     <td width="120px">{{field.label_tag }}</td>
+	 <td>{{field }}</td>
+</tr>
+{% endfor %}
+<tr><br /></tr>
+{% for field in farm %}
+       <tr> 
+	     <td width="120px">{{field.label_tag }}</td>
+	 <td>{{field }}</td>
+</tr>
+{% endfor %}
+<tr><br /></tr>
+<tr><th colspan=2 align="left">Lista de  Tutoriales</th></tr>
+{% for tutorial in tutoriales %}
+  <tr> <td width="120px" align="right"> <input type="checkbox" name="{{tutorial.0.titulo}}" value="{{tutorial.0.id}}"
+		   {% if tutorial.1 == tutorial.0.cupo %} disabled {% endif %}
+		   onClick="KeepCount(this)" class="tutorial">
+    </td><td>{{tutorial.0.titulo}}  (Cupo: {{tutorial.1}}/{{tutorial.0.cupo}})</td></tr>
+{% endfor %}
+<tr><td width="120px"><input type="submit" value="Enviar" /></td><td></Td></tr>
+</table>
+</form>
+{% endblock %}

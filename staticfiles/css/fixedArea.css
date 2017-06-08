@@ -1,0 +1,8 @@
+.floatingHeader {
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  border-collapse: collapse;
+  width: 100%;
+  word-wrap: break-word;
+}

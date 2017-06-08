@@ -1,0 +1,563 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="google-site-verification" content="GdrwVUKA0hCVh8KL3OuuqRHTtDnUh1lQ8X79PtNmJAM" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="keywords" content="">
+<meta name="description" content="Programas registrados en el PNPC de SEP-CONACYT">
+<title>Inicio | División de Estudios de Posgrado de la Facultad de Ingeniería Eléctrica.</title>
+<link rel="shortcut icon" href="/static/img/favicon.ico">
+
+
+
+
+<!--<link rel="stylesheet" href="/static//assets/css/bootstrap.css">
+<link rel="stylesheet" href="/static//assets/css/style.css">
+<link rel="stylesheet" href="/static//assets/css/font-awesome.min.css">-->
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.responsive.css' %}">
+<link rel="stylesheet" href="{% static 'css/mezzanine.css' %}">
+<!--<link rel="stylesheet" href="{% static 'css/style.css' %}">-->
+<link rel="stylesheet" href="{% static 'css/jcarousel.responsive.css' %}">
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery.jcarousel.min.js' %}"></script>
+<script src="{% static 'js/jcarousel.responsive.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+<!--<style>
+  .carousel-left { width: 75%; float: left; }
+
+  .some-text { float: left; width: 25%; }
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+  }
+  .carousel-indicators li {
+    display: inline-block;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: #0000ff;
+    box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);    
+}
+.left.carousel-control{
+  width: 10%;
+}
+.right.carousel-control{
+  width: 10%;
+}
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}
+.carousel-indicators .active {
+    background-color: #ffff99;
+}
+</style>-->
+<script>
+$(function() {
+    $('.middleinput:text, textarea').addClass('xlarge');
+    $('.control-group label').addClass('control-label');
+});
+</script>
+
+
+
+
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+
+</head>
+<body id="body">
+
+<div class="navbar">
+<div class="navbar-inner">
+<div class="container">
+    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </a>
+    <div id="top_header">
+    <div style="float: left; padding: 2%;">
+    <img src="{% static 'pie.gif' %}" sytle="max-width:100%; max-height:100%;" /> 
+    </div>
+<br />
+    <h3 style="color:#dddddd;">División de Estudios de Posgrado de la Facultad de Ingeniería Eléctrica.</h3>
+    <p class="tagline">Programas Acreditados en PNPC de SEP-CONACYT</p>
+    </div>
+    <div class="nav-collapse collapse" style="height: 0px;">
+        <form action="/search/" class="navbar-search pull-right">
+        <input class="search-query" placeholder="Search" type="text" name="q" value="">
+        </form>
+        
+<ul class="nav nav-collapse pull-left collapse" style="height: 0px;"><li class="active" id="dropdown-menu-oferta-académica"><a href="/">Home</a></li><li class="divider-vertical"></li><li class="dropdown"
+        id="dropdown-menu-oferta-académica"><a href="/oferta-acad%C3%A9mica/"data-toggle="dropdown" class="dropdown-toggle active">
+            Oferta Académica 
+            <span class="caret"></span></a><ul class="dropdown-menu" role="menu" ><li
+            class="dropdown-submenu"
+            
+        id="dropdown-menu-oferta-académica-doctorado"><a href="/oferta-acad%C3%A9mica/doctorado/">Doctorado</a><ul class="dropdown-menu"><li
+            class="dropdown-submenu"
+            
+        id="dropdown-menu-oferta-académica-doctorado-estructura-del-plan-de-estudios"><a href="/oferta-acad%C3%A9mica/doctorado/estructura-del-plan-de-estudios/">A) Estructura del Plan de Estudios</a><ul class="dropdown-menu"><li
+            
+            
+        id="dropdown-menu-oferta-académica-doctorado-estructura-del-plan-de-estudios-objetivos"><a href="/oferta-acad%C3%A9mica/doctorado/estructura-del-plan-de-estudios/objetivos/">Objetivos</a></li><li
+            
+            
+        id="dropdown-menu-oferta-académica-doctorado-estructura-del-plan-de-estudios-perfil-1"><a href="/oferta-acad%C3%A9mica/doctorado/estructura-del-plan-de-estudios/perfil-1/">Perfil</a></li><li
+            
+            
+        id="dropdown-menu-oferta-académica-doctorado-estructura-del-plan-de-estudios-plan-de-estudios"><a href="/oferta-acad%C3%A9mica/doctorado/estructura-del-plan-de-estudios/plan-de-estudios/">Plan de Estudios</a></li><li
+            
+            
+        id="dropdown-menu-http:--dep.fie.umich.mx-oferta-acad%C3%A9mica-maestr%C3%ADa-estructura-del-plan-de-estudios-materias-"><a href="http://dep.fie.umich.mx/oferta-acad%C3%A9mica/maestr%C3%ADa/estructura-del-plan-de-estudios/materias/">Materias</a></li></ul></li><li
+            
+            
+        id="dropdown-menu-oferta-académica-doctorado-b-alumnos-matriculados"><a href="/oferta-acad%C3%A9mica/doctorado/b-alumnos-matriculados/">B) Alumnos matriculados</a></li><li
+            
+            
+        id="dropdown-menu-oferta-académica-doctorado-nab-doctorado"><a href="/oferta-acad%C3%A9mica/doctorado/nab-doctorado/">C) NAB Doctorado</a></li><li
+            
+            
+        id="dropdown-menu-oferta-académica-doctorado-líneas-de-investigación"><a href="/oferta-acad%C3%A9mica/doctorado/l%C3%ADneas-de-investigaci%C3%B3n/">D) Líneas de Investigación</a></li><li
+            
+            
+        id="dropdown-menu-oferta-académica-doctorado-e-relación-profesor-estudiantes"><a href="/oferta-acad%C3%A9mica/doctorado/e-relaci%C3%B3n-profesor-estudiantes/">E) Relación profesor estudiantes</a></li><li
+            
+            
+        id="dropdown-menu-oferta-académica-doctorado-producción-académica"><a href="/oferta-acad%C3%A9mica/doctorado/producci%C3%B3n-acad%C3%A9mica/">F) Productividad  Académica</a></li><li
+            
+            
+        id="dropdown-menu-oferta-académica-doctorado-g-vinculación"><a href="/oferta-acad%C3%A9mica/doctorado/g-vinculaci%C3%B3n/">G) Vinculación</a></li><li
+            class="dropdown-submenu"
+            
+        id="dropdown-menu-oferta-académica-doctorado-h-procesos-administrativos"><a href="/oferta-acad%C3%A9mica/doctorado/h-procesos-administrativos/">H) Procesos Administrativos</a><ul class="dropdown-menu"><li
+            
+            
+        id="dropdown-menu-oferta-académica-doctorado-h-procesos-administrativos-proceso-de-admisión"><a href="/oferta-acad%C3%A9mica/doctorado/h-procesos-administrativos/proceso-de-admisi%C3%B3n/">Proceso de Admisión</a></li><li
+            
+            
+        id="dropdown-menu-oferta-académica-doctorado-h-procesos-administrativos-fechas-importantes"><a href="/oferta-acad%C3%A9mica/doctorado/h-procesos-administrativos/fechas-importantes/">Fechas Importantes</a></li><li
+            
+            
+        id="dropdown-menu-oferta-académica-doctorado-h-procesos-administrativos-responsables"><a href="/oferta-acad%C3%A9mica/doctorado/h-procesos-administrativos/responsables/">Responsables</a></li></ul></li></ul></li><li
+            class="dropdown-submenu"
+            
+        id="dropdown-menu-oferta-academica-maestria"><a href="/oferta-academica/maestria/">Maestría</a><ul class="dropdown-menu"><li
+            class="dropdown-submenu"
+            
+        id="dropdown-menu-oferta-académica-maestría-estructura-del-plan-de-estudios"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/estructura-del-plan-de-estudios/">A) Estructura del Plan de Estudios</a><ul class="dropdown-menu"><li
+            
+            
+        id="dropdown-menu-oferta-académica-maestría-estructura-del-plan-de-estudios-objetivos"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/estructura-del-plan-de-estudios/objetivos/">Objetivos</a></li><li
+            
+            
+        id="dropdown-menu-oferta-académica-maestría-estructura-del-plan-de-estudios-perfil"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/estructura-del-plan-de-estudios/perfil/">Perfil</a></li><li
+            
+            
+        id="dropdown-menu-oferta-académica-maestría-estructura-del-plan-de-estudios-plan-de-estudios"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/estructura-del-plan-de-estudios/plan-de-estudios/">Plan de Estudios</a></li><li
+            
+            
+        id="dropdown-menu-oferta-académica-maestría-estructura-del-plan-de-estudios-materias"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/estructura-del-plan-de-estudios/materias/">Materias</a></li></ul></li><li
+            
+            
+        id="dropdown-menu-oferta-académica-maestría-b-alumnos"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/b-alumnos/">B) Alumnos matriculados</a></li><li
+            
+            
+        id="dropdown-menu-oferta-académica-maestría-nab-maestría"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/nab-maestr%C3%ADa/">C) NAB Maestría</a></li><li
+            
+            
+        id="dropdown-menu-oferta-académica-maestría-líneas-de-investigación"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/l%C3%ADneas-de-investigaci%C3%B3n/">D) Líneas de Investigación</a></li><li
+            
+            
+        id="dropdown-menu-oferta-académica-maestría-e-relación-profesor-estudiantes"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/e-relaci%C3%B3n-profesor-estudiantes/">E) Relación profesor estudiantes</a></li><li
+            
+            
+        id="dropdown-menu-oferta-académica-maestría-f-producción-académica"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/f-producci%C3%B3n-acad%C3%A9mica/">F) Productividad  Académica</a></li><li
+            
+            
+        id="dropdown-menu-http:--dep.fie.umich.mx-oferta-acad%C3%A9mica-doctorado-g-vinculaci%C3%B3n-"><a href="http://dep.fie.umich.mx/oferta-acad%C3%A9mica/doctorado/g-vinculaci%C3%B3n/">G) Vinculación</a></li><li
+            class="dropdown-submenu"
+            
+        id="dropdown-menu-oferta-académica-maestría-h-procesos-administrativos"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/h-procesos-administrativos/">H) Procesos Administrativos</a><ul class="dropdown-menu"><li
+            
+            
+        id="dropdown-menu-oferta-académica-maestría-h-procesos-administrativos-proceso-de-admisión"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/h-procesos-administrativos/proceso-de-admisi%C3%B3n/">Proceso de Admisión</a></li><li
+            
+            
+        id="dropdown-menu-oferta-académica-maestría-h-procesos-administrativos-fechas-importantes"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/h-procesos-administrativos/fechas-importantes/">Fechas Importantes</a></li><li
+            
+            
+        id="dropdown-menu-oferta-académica-maestría-h-procesos-administrativos-responsables"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/h-procesos-administrativos/responsables/">Responsables</a></li><li
+            
+            
+        id="dropdown-menu-oferta-académica-maestría-h-procesos-administrativos-costos"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/h-procesos-administrativos/costos/">Costos</a></li></ul></li></ul></li></ul></li><li class="divider-vertical"></li><li class="dropdown"
+        id="dropdown-menu-personal-academico"><a href="/personal-academico/"data-toggle="dropdown" class="dropdown-toggle active">
+            Personal
+            <span class="caret"></span></a><ul class="dropdown-menu" role="menu" ><li
+            class="dropdown-submenu"
+            
+        id="dropdown-menu-personal-academico-profesores"><a href="/personal-academico/profesores/">Profesores</a><ul class="dropdown-menu"><li
+            
+            
+        id="dropdown-menu-personal-academico-profesores-sistemas-de-control"><a href="/personal-academico/profesores/sistemas-de-control/">Sistemas de Control</a></li><li
+            
+            
+        id="dropdown-menu-personal-academico-profesores-sistemas-eléctricos-de-potencia"><a href="/personal-academico/profesores/sistemas-el%C3%A9ctricos-de-potencia/">Sistemas Eléctricos de Potencia</a></li><li
+            
+            
+        id="dropdown-menu-personal-academico-profesores-ciencias-computacionales"><a href="/personal-academico/profesores/ciencias-computacionales/">Ciencias Computacionales</a></li></ul></li></ul></li><li class="divider-vertical"></li><li class="dropdown"
+        id="dropdown-menu-infraestructura"><a href="/infraestructura/"data-toggle="dropdown" class="dropdown-toggle active">
+            Infraestructura
+            <span class="caret"></span></a><ul class="dropdown-menu" role="menu" ><li
+            
+            
+        id="dropdown-menu-http:--biblioteca.dep.fie.umich.mx"><a href="http://biblioteca.dep.fie.umich.mx">Biblioteca</a></li><li
+            
+            
+        id="dropdown-menu-http:--148.216.38.58-WeatherStationMonitor-"><a href="http://148.216.38.58/WeatherStationMonitor/">Estación Meteorológica</a></li></ul></li><li class="divider-vertical"></li><li class="dropdown"
+        id="dropdown-menu-servicios"><a href="/servicios/"data-toggle="dropdown" class="dropdown-toggle active">
+            Servicios
+            <span class="caret"></span></a><ul class="dropdown-menu" role="menu" ><li
+            
+            
+        id="dropdown-menu-http:--dep.fie.umich.mx-webmail"><a href="http://dep.fie.umich.mx/webmail">Correo Institucional</a></li><li
+            
+            
+        id="dropdown-menu-http:--dep.fie.umich.mx-cursos-"><a href="http://dep.fie.umich.mx/cursos/">Cursos moodle </a></li><li
+            
+            
+        id="dropdown-menu-http:--dep.fie.umich.mx-dhcpp-"><a href="http://dep.fie.umich.mx/dhcpp/">Registro DHCP</a></li><li
+            
+            
+        id="dropdown-menu-http:--148.216.38.58-WeatherStationMonitor--1"><a href="http://148.216.38.58/WeatherStationMonitor/-1">Estación Meteorológica</a></li></ul></li><li class="divider-vertical"></li><li class="dropdown"
+        id="dropdown-menu-hci"><a href="/hci/">
+            HCI
+            
+        </a></li><li class="divider-vertical"></li><li class="dropdown"
+        id="dropdown-menu-contact"><a href="/contact/"data-toggle="dropdown" class="dropdown-toggle active">
+            Contactanos
+            <span class="caret"></span></a><ul class="dropdown-menu" role="menu" ><li
+            
+            
+        id="dropdown-menu-contact-como-llegar"><a href="/contact/como-llegar/">Como llegar</a></li></ul></li><li class="divider-vertical"></li><li class="dropdown"
+        id="dropdown-menu-documentos"><a href="/documentos/">
+            Documentos
+            
+        </a></li><li class="divider-vertical"></li></ul>
+
+    </div>
+</div>
+</div>
+</div>
+
+<div class="container">
+
+
+
+
+
+
+<h1>
+Inicio
+</h1>
+
+<ul class="breadcrumb">
+<li>Home</li>
+</ul>
+
+</div>
+
+<div class="container">
+<div class="row">
+
+<!-- <div class="span3 left">
+    
+    <div class="panel tree">
+
+<ul class="nav nav-list navlist-menu-level-0"><li class="first active"><a href="/">Home</a></li><li class="
+             
+             
+             "
+      id="tree-menu-oferta-académica"><a href="/oferta-acad%C3%A9mica/">Oferta Académica </a><ul class="nav nav-list navlist-menu-level-1"><li class="
+             
+              first
+             "
+      id="tree-menu-oferta-académica-doctorado"><a href="/oferta-acad%C3%A9mica/doctorado/">Doctorado</a><ul class="nav nav-list navlist-menu-level-2"><li class="
+             
+              first
+             "
+      id="tree-menu-oferta-académica-doctorado-estructura-del-plan-de-estudios"><a href="/oferta-acad%C3%A9mica/doctorado/estructura-del-plan-de-estudios/">A) Estructura del Plan de Estudios</a><ul class="nav nav-list navlist-menu-level-3"><li class="
+             
+              first
+             "
+      id="tree-menu-oferta-académica-doctorado-estructura-del-plan-de-estudios-objetivos"><a href="/oferta-acad%C3%A9mica/doctorado/estructura-del-plan-de-estudios/objetivos/">Objetivos</a></li><li class="
+             
+             
+             "
+      id="tree-menu-oferta-académica-doctorado-estructura-del-plan-de-estudios-perfil-1"><a href="/oferta-acad%C3%A9mica/doctorado/estructura-del-plan-de-estudios/perfil-1/">Perfil</a></li><li class="
+             
+             
+             "
+      id="tree-menu-oferta-académica-doctorado-estructura-del-plan-de-estudios-plan-de-estudios"><a href="/oferta-acad%C3%A9mica/doctorado/estructura-del-plan-de-estudios/plan-de-estudios/">Plan de Estudios</a></li><li class="
+             
+             
+              last"
+      id="tree-menu-http:--dep.fie.umich.mx-oferta-acad%C3%A9mica-maestr%C3%ADa-estructura-del-plan-de-estudios-materias-"><a href="http://dep.fie.umich.mx/oferta-acad%C3%A9mica/maestr%C3%ADa/estructura-del-plan-de-estudios/materias/">Materias</a></li></ul></li><li class="
+             
+             
+             "
+      id="tree-menu-oferta-académica-doctorado-b-alumnos-matriculados"><a href="/oferta-acad%C3%A9mica/doctorado/b-alumnos-matriculados/">B) Alumnos matriculados</a></li><li class="
+             
+             
+             "
+      id="tree-menu-oferta-académica-doctorado-nab-doctorado"><a href="/oferta-acad%C3%A9mica/doctorado/nab-doctorado/">C) NAB Doctorado</a></li><li class="
+             
+             
+             "
+      id="tree-menu-oferta-académica-doctorado-líneas-de-investigación"><a href="/oferta-acad%C3%A9mica/doctorado/l%C3%ADneas-de-investigaci%C3%B3n/">D) Líneas de Investigación</a></li><li class="
+             
+             
+             "
+      id="tree-menu-oferta-académica-doctorado-e-relación-profesor-estudiantes"><a href="/oferta-acad%C3%A9mica/doctorado/e-relaci%C3%B3n-profesor-estudiantes/">E) Relación profesor estudiantes</a></li><li class="
+             
+             
+             "
+      id="tree-menu-oferta-académica-doctorado-producción-académica"><a href="/oferta-acad%C3%A9mica/doctorado/producci%C3%B3n-acad%C3%A9mica/">F) Productividad  Académica</a></li><li class="
+             
+             
+             "
+      id="tree-menu-oferta-académica-doctorado-g-vinculación"><a href="/oferta-acad%C3%A9mica/doctorado/g-vinculaci%C3%B3n/">G) Vinculación</a></li><li class="
+             
+             
+              last"
+      id="tree-menu-oferta-académica-doctorado-h-procesos-administrativos"><a href="/oferta-acad%C3%A9mica/doctorado/h-procesos-administrativos/">H) Procesos Administrativos</a><ul class="nav nav-list navlist-menu-level-3"><li class="
+             
+              first
+             "
+      id="tree-menu-oferta-académica-doctorado-h-procesos-administrativos-proceso-de-admisión"><a href="/oferta-acad%C3%A9mica/doctorado/h-procesos-administrativos/proceso-de-admisi%C3%B3n/">Proceso de Admisión</a></li><li class="
+             
+             
+             "
+      id="tree-menu-oferta-académica-doctorado-h-procesos-administrativos-fechas-importantes"><a href="/oferta-acad%C3%A9mica/doctorado/h-procesos-administrativos/fechas-importantes/">Fechas Importantes</a></li><li class="
+             
+             
+              last"
+      id="tree-menu-oferta-académica-doctorado-h-procesos-administrativos-responsables"><a href="/oferta-acad%C3%A9mica/doctorado/h-procesos-administrativos/responsables/">Responsables</a></li></ul></li></ul></li><li class="
+             
+             
+              last"
+      id="tree-menu-oferta-academica-maestria"><a href="/oferta-academica/maestria/">Maestría</a><ul class="nav nav-list navlist-menu-level-2"><li class="
+             
+              first
+             "
+      id="tree-menu-oferta-académica-maestría-estructura-del-plan-de-estudios"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/estructura-del-plan-de-estudios/">A) Estructura del Plan de Estudios</a><ul class="nav nav-list navlist-menu-level-3"><li class="
+             
+              first
+             "
+      id="tree-menu-oferta-académica-maestría-estructura-del-plan-de-estudios-objetivos"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/estructura-del-plan-de-estudios/objetivos/">Objetivos</a></li><li class="
+             
+             
+             "
+      id="tree-menu-oferta-académica-maestría-estructura-del-plan-de-estudios-perfil"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/estructura-del-plan-de-estudios/perfil/">Perfil</a></li><li class="
+             
+             
+             "
+      id="tree-menu-oferta-académica-maestría-estructura-del-plan-de-estudios-plan-de-estudios"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/estructura-del-plan-de-estudios/plan-de-estudios/">Plan de Estudios</a></li><li class="
+             
+             
+              last"
+      id="tree-menu-oferta-académica-maestría-estructura-del-plan-de-estudios-materias"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/estructura-del-plan-de-estudios/materias/">Materias</a></li></ul></li><li class="
+             
+             
+             "
+      id="tree-menu-oferta-académica-maestría-b-alumnos"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/b-alumnos/">B) Alumnos matriculados</a></li><li class="
+             
+             
+             "
+      id="tree-menu-oferta-académica-maestría-nab-maestría"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/nab-maestr%C3%ADa/">C) NAB Maestría</a></li><li class="
+             
+             
+             "
+      id="tree-menu-oferta-académica-maestría-líneas-de-investigación"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/l%C3%ADneas-de-investigaci%C3%B3n/">D) Líneas de Investigación</a></li><li class="
+             
+             
+             "
+      id="tree-menu-oferta-académica-maestría-e-relación-profesor-estudiantes"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/e-relaci%C3%B3n-profesor-estudiantes/">E) Relación profesor estudiantes</a></li><li class="
+             
+             
+             "
+      id="tree-menu-oferta-académica-maestría-f-producción-académica"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/f-producci%C3%B3n-acad%C3%A9mica/">F) Productividad  Académica</a></li><li class="
+             
+             
+             "
+      id="tree-menu-http:--dep.fie.umich.mx-oferta-acad%C3%A9mica-doctorado-g-vinculaci%C3%B3n-"><a href="http://dep.fie.umich.mx/oferta-acad%C3%A9mica/doctorado/g-vinculaci%C3%B3n/">G) Vinculación</a></li><li class="
+             
+             
+              last"
+      id="tree-menu-oferta-académica-maestría-h-procesos-administrativos"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/h-procesos-administrativos/">H) Procesos Administrativos</a><ul class="nav nav-list navlist-menu-level-3"><li class="
+             
+             
+             "
+      id="tree-menu-oferta-académica-maestría-h-procesos-administrativos-fechas-importantes"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/h-procesos-administrativos/fechas-importantes/">Fechas Importantes</a></li><li class="
+             
+             
+              last"
+      id="tree-menu-oferta-académica-maestría-h-procesos-administrativos-costos"><a href="/oferta-acad%C3%A9mica/maestr%C3%ADa/h-procesos-administrativos/costos/">Costos</a></li></ul></li></ul></li></ul></li><li class="
+             
+             
+             "
+      id="tree-menu-personal-academico"><a href="/personal-academico/">Personal</a><ul class="nav nav-list navlist-menu-level-1"><li class="
+             
+              first
+              last"
+      id="tree-menu-personal-academico-profesores"><a href="/personal-academico/profesores/">Profesores</a><ul class="nav nav-list navlist-menu-level-2"><li class="
+             
+              first
+             "
+      id="tree-menu-personal-academico-profesores-sistemas-de-control"><a href="/personal-academico/profesores/sistemas-de-control/">Sistemas de Control</a></li><li class="
+             
+             
+             "
+      id="tree-menu-personal-academico-profesores-sistemas-eléctricos-de-potencia"><a href="/personal-academico/profesores/sistemas-el%C3%A9ctricos-de-potencia/">Sistemas Eléctricos de Potencia</a></li><li class="
+             
+             
+              last"
+      id="tree-menu-personal-academico-profesores-ciencias-computacionales"><a href="/personal-academico/profesores/ciencias-computacionales/">Ciencias Computacionales</a></li></ul></li></ul></li><li class="
+             
+             
+             "
+      id="tree-menu-infraestructura"><a href="/infraestructura/">Infraestructura</a><ul class="nav nav-list navlist-menu-level-1"><li class="
+             
+              first
+             "
+      id="tree-menu-http:--biblioteca.dep.fie.umich.mx"><a href="http://biblioteca.dep.fie.umich.mx">Biblioteca</a></li><li class="
+             
+             
+              last"
+      id="tree-menu-http:--148.216.38.58-WeatherStationMonitor-"><a href="http://148.216.38.58/WeatherStationMonitor/">Estación Meteorológica</a></li></ul></li><li class="
+             
+             
+             "
+      id="tree-menu-servicios"><a href="/servicios/">Servicios</a><ul class="nav nav-list navlist-menu-level-1"><li class="
+             
+              first
+             "
+      id="tree-menu-http:--dep.fie.umich.mx-webmail"><a href="http://dep.fie.umich.mx/webmail">Correo Institucional</a></li><li class="
+             
+             
+             "
+      id="tree-menu-http:--dep.fie.umich.mx-cursos-"><a href="http://dep.fie.umich.mx/cursos/">Cursos moodle </a></li><li class="
+             
+             
+             "
+      id="tree-menu-http:--dep.fie.umich.mx-dhcpp-"><a href="http://dep.fie.umich.mx/dhcpp/">Registro DHCP</a></li><li class="
+             
+             
+              last"
+      id="tree-menu-http:--148.216.38.58-WeatherStationMonitor--1"><a href="http://148.216.38.58/WeatherStationMonitor/-1">Estación Meteorológica</a></li></ul></li></ul>
+</div>
+    
+</div>-->
+
+<div class="wrapper">
+  <div class="jcarousel-wrapper" style=" width:100%;height:400px;">
+    <div class="jcarousel">
+        <ul>
+        {% for anuncio in que_anuncios %}
+          <li> <p> {{ anuncio.mensaje }} </p> </li>
+          {% if anuncio.imagen %}
+            <li> <img src="{{anuncio.imagen.url}}" alt="My image" style="width:600px;height:400px;"> </li>
+          {% else %}
+            <li> <p> </p> </li>
+          {% endif %}
+        {% endfor %}
+        </ul>
+    </div>
+    <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+    <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+    <p class="jcarousel-pagination"></p>
+  </div>
+</div>
+
+<div class="span9 middle">
+    
+<!--
+This template is provided as a custom template for the homepage, for
+when it is configured as an editable page in the navigation tree. Feel
+free to modify it.
+-->
+
+
+
+<div class="transparent">
+<div style="position: relative; top: 50px; left: 70px; opacity: 1; filter: alpha(opacity=100);">
+<h2 style="color: #228b22;"><br class="Apple-interchange-newline" />Programas registrados en el PNPC de SEP-CONACYT</h2>
+<strong style="color: #000000; font-size: 10px;"><br /></strong>
+<h1 style="color: #228b22;"><strong style="color: #ff0000; font-size: 14px;">&nbsp;SEDES ALTERNAS PARA EL PROCESO DE ADMISI&Oacute;N:</strong></h1>
+<ul>
+<li><strong>Examen de Admisi&oacute;n se realizar&aacute; los d&iacute;as del 10-12 de octubre a las 10:00 a.m. en el Caf&eacute; Chiapas del outlet la Huerta&nbsp;<br /></strong><strong>(<a href="http://www.heraldo.com.mx/michoacan/morelia/58080/ampliacion-la-huerta/#mapa">ver ubicaci&oacute;n</a>)</strong></li>
+<li><strong>Curso Proped&eacute;utico se llevar&aacute; a cabo Instituto Vasco de Quiroga (<a href="https://www.google.com.mx/maps/place/Instituto+Vasco+de+Quiroga/@19.676453,-101.1992057,17z/data=!3m1!4b1!4m5!3m4!1s0x842d0db7fd9de0eb:0x6edefbcac6f2ba15!8m2!3d19.676453!4d-101.197017?hl=en">ver ubicaci&oacute;n</a>)</strong></li>
+</ul>
+<h2 style="color: #228b22;"><strong style="color: #000000; font-size: 10px;"></strong><span style="color: #000000; font-size: 10px;">&nbsp;</span></h2>
+<h2 style="color: #8a2be2;">Maestr&iacute;a y Doctorado en Ciencias de la Ingenier&iacute;a El&eacute;ctrica<span style="color: #000000; font-size: 10px;">&nbsp;</span></h2>
+<ul>
+<li>
+<h2>Sistemas El&eacute;ctricos</h2>
+</li>
+<li>
+<h2>Sistemas de Control</h2>
+</li>
+<li>
+<h2>Sistemas Computacionales</h2>
+</li>
+</ul>
+</div>
+</div>
+
+
+
+
+</div>
+
+<div class="span3 right">
+<a class="twitter-timeline" href="https://twitter.com/kyriox/depfie" data-widget-id="392672369287757824">Tweets</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+</div>
+
+</div>
+</div>
+
+<footer>
+<div class="container">
+<!-- 
+
+<ul><li><ul><li ><a href="/servicios/">Servicios</a></li><li ><a href="http://dep.fie.umich.mx/webmail">Correo Institucional</a></li><li ><a href="http://dep.fie.umich.mx/cursos/">Cursos moodle </a></li><li ><a href="http://dep.fie.umich.mx/dhcpp/">Registro DHCP</a></li><li ><a href="http://148.216.38.58/WeatherStationMonitor/-1">Estación Meteorológica</a></li></ul></li></ul>
+ -->
+<br style="clear:both">
+
+<!--  -->
+
+<p>
+     &copy; 2013 <a href="http://dep.fie.umich.mx/"><strong>dep.fie.umich.mx</strong></a>
+    <br \>Jos&eacute; Ortiz Bejar
+
+    
+</p>
+</div>
+</footer>
+
+
+
+</body>
+</html>
